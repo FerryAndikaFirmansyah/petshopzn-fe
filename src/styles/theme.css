@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Story+Script&display=swap');
+
+:root {
+    /* === WARNA UTAMA === */
+    --color-primary: #4E73DF;
+    --color-primary-dark: #2E59D9;
+    --color-secondary: #F6C23E;
+    --color-accent: #FD7E14;
+
+    /* === WARNA TAMBAHAN === */
+    --color-bg: #F8F9FA;
+    --color-surface: #FFFFFF;
+    --color-text: #2E2E2E;
+    --color-muted: #6C757D;
+
+    /* === STATUS COLOR === */
+    --color-success: #1CC88A;
+    --color-warning: #F6C23E;
+    --color-danger: #E74A3B;
+    --color-info: #36B9CC;
+
+    /* === RADIUS & SHADOW === */
+    --radius-lg: 15px;
+    --radius-md: 10px;
+    --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* === GLOBAL === */
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* === NAVBAR === */
+.navbar {
+    background-color: #778899 !important;
+    color: white !important;
+}
+
+.brand-logo {
+    font-family: "Story Script", cursive;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.navbar-brand,
+.navbar a {
+    letter-spacing: 1px;
+    color: white !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a:hover {
+    color: var(--color-secondary) !important;
+}
+
+/* === SIDEBAR === */
+.sidebar {
+    background-color: #778899;
+    color: white;
+    min-height: 100vh;
+    width: 260px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    border-radius: var(--radius-md);
+    transition: all 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background-color: var(--color-primary-dark);
+}
+
+.sidebar-brand,
+.CSidebarBrand {
+    font-family: 'Story Script', cursive;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: white;
+    letter-spacing: 1px;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Warna teks menu sidebar */
+.sidebar .nav-link {
+    color: #ffe082;
+    /* contoh: kuning lembut */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Saat hover */
+.sidebar .nav-link:hover {
+    color: #ffca28;
+    /* sedikit lebih terang */
+}
+
+/* Saat aktif (halaman sedang dikunjungi) */
+.sidebar .nav-link.active {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-md);
+}
+
+.sidebar .nav-title {
+    color: #ffffff !important;
+}
+
+/* === SIDEBAR OVERLAY UNTUK MOBILE === */
+.sidebar-overlay {
+    display: none;
+}
+
+/* === BUTTON === */
+.btn-primary {
+    background-color: var(--color-primary);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.btn-warning {
+    background-color: var(--color-secondary);
+    border: none;
+    color: #333;
+}
+
+.btn-warning:hover {
+    background-color: #eab12d;
+}
+
+.btn-outline-primary {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+/* === CARD === */
+.card {
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: none;
+    background-color: var(--color-surface);
+}
+
+/* === TABEL === */
+.table thead {
+    background-color: #778899;
+    color: white;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(78, 115, 223, 0.08);
+}
+
+/* === BADGE === */
+.badge.bg-success {
+    background-color: var(--color-success) !important;
+}
+
+.badge.bg-warning {
+    background-color: var(--color-warning) !important;
+    color: #333;
+}
+
+.badge.bg-danger {
+    background-color: var(--color-danger) !important;
+}
+
+.badge.bg-info {
+    background-color: var(--color-info) !important;
+    color: #333;
+}
+
+/* === FORM === */
+.form-control,
+.form-select {
+    border-radius: var(--radius-md);
+}
+
+label {
+    font-weight: 500;
+}
+
+/* === DASHBOARD WIDGET === */
+.dashboard-card {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.2s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+}
+
+.dashboard-card h5 {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* === HOME PAGE === */
+.hero-section {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+    color: white;
+}
+
+.hero-section h1 {
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+
+.hero-section p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+/* === FOOTER === */
+footer {
+    background-color: #778899;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+/* === LAYOUT UTAMA === */
+.main-content {
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s ease;
+    min-height: 100vh;
+    padding: 90px 20px 40px;
+    /* atas sesuai navbar */
+    background-color: var(--color-bg);
+}
+
+.content-wrapper {
+    width: 100%;
+    max-width: 1100px;
+    transition: all 0.3s ease;
+}
+
+/* Saat sidebar terbuka di layar besar */
+.with-sidebar .main-content {
+    margin-left: 260px;
+}
+
+/* ==========================
+     📱 RESPONSIVE DESIGN
+     ========================== */
+
+/* === TABLE RESPONSIVE === */
+@media (max-width: 992px) {
+    .with-sidebar .main-content {
+        margin-left: 0;
+    }
+
+    .content-wrapper {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* === SIDEBAR COLLAPSE (MOBILE) === */
+@media (max-width: 992px) {
+    .sidebar {
+        position: fixed;
+        left: -260px;
+        transition: all 0.3s ease;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .sidebar-overlay {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.4);
+        position: fixed;
+        inset: 0;
+        z-index: 999;
+    }
+
+    /* === FIX Z-INDEX & INTERAKSI MOBILE === */
+    .c-sidebar {
+        z-index: 1050 !important;
+        /* pastikan di depan navbar */
+    }
+
+    .c-header,
+    .navbar {
+        z-index: 1000 !important;
+    }
+
+    /* Semua teks sidebar jadi putih kecuali brand */
+    .c-sidebar .nav-link,
+    .c-sidebar .nav-title,
+    .c-sidebar .btn-link {
+        color: #ffffff !important;
+    }
+
+    .c-sidebar .nav-link:hover,
+    .c-sidebar .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.15);
+        border-radius: 8px;
+    }
+
+}
+
+
+
+/* === HERO MOBILE === */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-section p {
+        font-size: 0.95rem;
+    }
+}
+
+/* === CARD GRID (PRODUCTS / DASHBOARD) === */
+@media (max-width: 576px) {
+
+    .dashboard-card,
+    .feature-card {
+        margin-bottom: 15px;
+    }
+
+    .btn {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+    }
+
+    .card img {
+        height: 140px !important;
+    }
+}
